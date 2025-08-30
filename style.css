@@ -189,46 +189,6 @@ body {
     transform: scale(1.1); /* Увеличиваем на 10% */
 }
 
-/* Адаптивность для мобильных устройств */
-@media (max-width: 768px) {
-    /* Навигация */
-    .nav-container {
-        flex-direction: column; /* Элементы в колонку */
-        gap: 1rem;
-        padding: 0 1rem;
-    }
-    
-    .nav-menu {
-        gap: 1rem;
-    }
-    
-    /* Герой-секция */
-    .hero-content h1 {
-        font-size: 2rem !important; /* Меньший размер заголовка */
-    }
-    
-    .hero-content p {
-        font-size: 1rem;
-    }
-    
-    /* Карточки */
-    .features-container {
-        flex-direction: column; /* Карточки в колонку */
-        align-items: center;
-    }
-    
-    .feature-card {
-        min-width: unset; /* Убираем минимальную ширину */
-        width: 100%;
-        max-width: 300px;
-    }
-    
-    /* Футер */
-    .footer-container {
-        padding: 0 1rem;
-    }
-}
-
 /* Адаптивность для мобильных */
 @media (max-width: 768px) {
     /* Навигация */
