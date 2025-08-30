@@ -1,0 +1,190 @@
+/* 1. Сброс стандартных отступов браузера */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Стили для всей страницы */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* 3. Стили для навигационной панели */
+.navbar {
+    background-color: #2c3e50;
+    padding: 1rem 0;
+}
+
+/* 4. Контейнер для содержимого навигации */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+/* 5. Стили для логотипа */
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* 6. Стили для меню */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+/* 7. Стили для ссылок */
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* 8. Стили для главной секции */
+#home {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Стили для герой-секции */
+#home {
+    min-height: 80vh;           /* Минимальная высота 80% от высоты экрана */
+    display: flex;
+    align-items: center;        /* Вертикальное выравнивание по центру */
+    justify-content: center;    /* Горизонтальное выравнивание по центру */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Красивый градиент */
+    color: white;               /* Белый текст */
+    text-align: center;
+}
+
+/* Контейнер для контента */
+.hero-content {
+    max-width: 600px;
+    padding: 2rem;
+}
+
+/* Заголовок */
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Тень для текста */
+}
+
+/* Подзаголовок */
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9; /* Лёгкая прозрачность */
+}
+
+/* Кнопка */
+.cta-button {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* Эффект при наведении на кнопку */
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+    background: #ff5252;
+}
+
+/* Стили для секции с карточками */
+.features-section {
+    padding: 5rem 2rem;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.features-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+}
+
+/* Контейнер для карточек */
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap; /* Позволяет карточкам переноситься на новую строку */
+}
+
+/* Стили отдельной карточки */
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Равномерное распределение пространства */
+    min-width: 250px;
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Эффект при наведении на карточку */
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Стили для подвала */
+.footer {
+    background: #2c3e50;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.feature-card h3 {
+    transition: transform 0.3s ease; /* Добавляем анимацию */
+}
+
+.feature-card:hover h3 {
+    transform: scale(1.1); /* Увеличиваем на 10% */
+}
