@@ -228,3 +228,58 @@ body {
         padding: 0 1rem;
     }
 }
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    /* Навигация */
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 0 10px;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+    
+    /* Герой-секция */
+    #home {
+        padding: 20px 10px;
+        min-height: 60vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem !important;
+        line-height: 1.2;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+    
+    /* Карточки */
+    .features-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
+    .feature-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: unset;
+    }
+    
+    /* Общие стили */
+    body {
+        padding-top: 100px; /* Увеличиваем отступ для навигации */
+    }
+}
