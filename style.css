@@ -10,15 +10,20 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
+    padding-top: 80px; /* Отступ для фиксированной навигации */
 }
 
 /* 3. Стили для навигационной панели */
 .navbar {
     background-color: #2c3e50;
     padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 4. Контейнер для содержимого навигации */
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -28,64 +33,59 @@ body {
     padding: 0 2rem;
 }
 
-/* 5. Стили для логотипа */
 .logo {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-/* 6. Стили для меню */
 .nav-menu {
     display: flex;
     list-style: none;
     gap: 2rem;
 }
 
-/* 7. Стили для ссылок */
 .nav-menu a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-/* 8. Стили для главной секции */
-#home {
-    padding: 2rem;
-    text-align: center;
+.nav-menu a:hover {
+    color: #3498db;
 }
 
-/* Стили для герой-секции */
+/* 4. Стили для герой-секции */
 #home {
-    min-height: 80vh;           /* Минимальная высота 80% от высоты экрана */
+    min-height: 80vh;
     display: flex;
-    align-items: center;        /* Вертикальное выравнивание по центру */
-    justify-content: center;    /* Горизонтальное выравнивание по центру */
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Красивый градиент */
-    color: white;               /* Белый текст */
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
     text-align: center;
+    width: 100%;
 }
 
-/* Контейнер для контента */
 .hero-content {
     max-width: 600px;
     padding: 2rem;
+    background: rgba(0, 0, 0, 0.3); /* Легкий фон для текста */
+    border-radius: 15px;
 }
 
-/* Заголовок */
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Тень для текста */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Подзаголовок */
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    opacity: 0.9; /* Лёгкая прозрачность */
+    opacity: 0.9;
 }
 
-/* Кнопка */
 .cta-button {
     background: #ff6b6b;
     color: white;
@@ -98,14 +98,13 @@ body {
     box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
 }
 
-/* Эффект при наведении на кнопку */
 .cta-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
     background: #ff5252;
 }
 
-/* Стили для секции с карточками */
+/* 5. Стили для секции с карточками */
 .features-section {
     padding: 5rem 2rem;
     background: #f8f9fa;
@@ -118,29 +117,26 @@ body {
     color: #2c3e50;
 }
 
-/* Контейнер для карточек */
 .features-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     gap: 2rem;
     justify-content: center;
-    flex-wrap: wrap; /* Позволяет карточкам переноситься на новую строку */
+    flex-wrap: wrap;
 }
 
-/* Стили отдельной карточки */
 .feature-card {
     background: white;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    flex: 1; /* Равномерное распределение пространства */
+    flex: 1;
     min-width: 250px;
     max-width: 350px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Эффект при наведении на карточку */
 .feature-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -157,7 +153,7 @@ body {
     line-height: 1.6;
 }
 
-/* Стили для подвала */
+/* 6. Стили для подвала */
 .footer {
     background: #2c3e50;
     color: white;
@@ -181,38 +177,36 @@ body {
     text-decoration: underline;
 }
 
-.feature-card h3 {
-    transition: transform 0.3s ease; /* Добавляем анимацию */
-}
-
-.feature-card:hover h3 {
-    transform: scale(1.1); /* Увеличиваем на 10% */
-}
-
-/* Адаптивность для мобильных */
+/* 7. Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
-    /* Навигация */
+    body {
+        padding-top: 100px;
+    }
+    
     .nav-container {
         flex-direction: column;
-        text-align: center;
         gap: 15px;
-        padding: 0 10px;
+        padding: 0 1rem;
     }
     
     .nav-menu {
         flex-direction: column;
         gap: 10px;
-        padding: 0;
+        text-align: center;
     }
     
-    /* Герой-секция */
     #home {
-        padding: 20px 10px;
         min-height: 60vh;
+        padding: 20px 15px;
+    }
+    
+    .hero-content {
+        padding: 20px;
+        margin: 0 10px;
     }
     
     .hero-content h1 {
-        font-size: 2rem !important;
+        font-size: 2rem;
         line-height: 1.2;
     }
     
@@ -225,11 +219,13 @@ body {
         font-size: 1rem;
     }
     
-    /* Карточки */
+    .features-section {
+        padding: 3rem 1rem;
+    }
+    
     .features-container {
         flex-direction: column;
         gap: 20px;
-        padding: 0 10px;
     }
     
     .feature-card {
@@ -237,9 +233,15 @@ body {
         max-width: 100%;
         min-width: unset;
     }
+}
+
+/* 8. Для очень маленьких экранов */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
     
-    /* Общие стили */
-    body {
-        padding-top: 100px; /* Увеличиваем отступ для навигации */
+    .features-section h2 {
+        font-size: 2rem;
     }
 }
